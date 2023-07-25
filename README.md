@@ -10,7 +10,7 @@
 |[Fair Use](#fair-use-disclaimer)    |
 | [Principal](#principal-section)  | 
 | [Installation](#installation-guide )  | 
-| [Known Isues](#known-isues )  | 
+| [Known Issues](#known-issues )  | 
 | [Español](#version-en-español)  | 
 | [Uso Justo](#descargo-de-responsabilidad)  | 
 | [Seccion Principal](#sección-principal)  | 
@@ -37,7 +37,7 @@ The bug arises because the function designed to verify the value of the multipli
 To install the patch just download the modified exe from the repository and  copypaste it in the game's folder to avoid any problem, save the old executable as sh3.exe.old just in case you need to restore the original game files.
 
 
-### Known Isues
+### Known Issues
 
 I could not make a perfect patch tho, there is a problem that basicaly consist of: while i check for the min and max values before changing the multiplier's value, the resulting behavior would reset the value to 1 even if you change the value to a valid on min-max range one, thus preventing you from using the multiplier in any value that it's not 1, like if the value was harcoded, wich may be a problem if you already completed the game, but in that case you can manualy change the value of the multiplier so there is no need to install the fix. This is due to a function call somewhere in the game's code, while i found all the static calls and jumps to the call instruction that executes our corrective function (as you may see in my blog explanation)  and also tried to manualy debug and set checkpoints to find any dinamic one (for example "call eax+123") for several hours. I could not find the one that its causing this problem, but as the patch still fixes the game breaking bug and since changing to normal game is as easy as replacing my executable for the original one. There is no big problem with it and you can enjoy the game anyway.
 
